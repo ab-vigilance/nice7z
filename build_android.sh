@@ -47,11 +47,11 @@ function build_for_android {
   rm -rf ${ABI_BUILD_DIR}
 }
 
-build_for_android armeabi-v7a android-21 debug
-build_for_android arm64-v8a android-21 debug
-build_for_android x86 android-21 debug
-build_for_android x86_64 android-21 debug
-build_for_android armeabi-v7a android-21 release
-build_for_android arm64-v8a android-21 release
-build_for_android x86 android-21 release
-build_for_android x86_64 android-21 release
+build_for_android armeabi-v7a android-36 debug
+build_for_android arm64-v8a android-36 debug
+build_for_android x86 android-36 debug
+build_for_android x86_64 android-36 debug
+build_for_android armeabi-v7a android-36 release
+build_for_android arm64-v8a android-36 release
+build_for_android x86 android-36 release
+build_for_android x86_64 android-36 release
