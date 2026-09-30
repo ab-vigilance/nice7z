@@ -38,7 +38,7 @@ function build_for_android {
         -DCMAKE_ANDROID_NDK=$ANDROID_NDK \
         -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
         -DANDROID_TOOLCHAIN=clang \
-        -DCMAKE_INSTALL_PREFIX=.
+        -DCMAKE_INSTALL_PREFIX=. \
         -DCMAKE_SHARED_LINKER_FLAGS="-Wl,-z,max-page-size=16384"
 
   pushd ${ABI_BUILD_DIR}
