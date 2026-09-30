@@ -39,6 +39,7 @@ function build_for_android {
         -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
         -DANDROID_TOOLCHAIN=clang \
         -DCMAKE_INSTALL_PREFIX=.
+        -DCMAKE_SHARED_LINKER_FLAGS="-Wl,-z,max-page-size=16384"
 
   pushd ${ABI_BUILD_DIR}
     make -j5
@@ -47,11 +48,11 @@ function build_for_android {
   rm -rf ${ABI_BUILD_DIR}
 }
 
-build_for_android armeabi-v7a android-36 debug
-build_for_android arm64-v8a android-36 debug
-build_for_android x86 android-36 debug
-build_for_android x86_64 android-36 debug
-build_for_android armeabi-v7a android-36 release
-build_for_android arm64-v8a android-36 release
-build_for_android x86 android-36 release
-build_for_android x86_64 android-36 release
+build_for_android armeabi-v7a android-21 debug
+build_for_android arm64-v8a android-21 debug
+build_for_android x86 android-21 debug
+build_for_android x86_64 android-21 debug
+build_for_android armeabi-v7a android-21 release
+build_for_android arm64-v8a android-21 release
+build_for_android x86 android-21 release
+build_for_android x86_64 android-21 release
